@@ -37,12 +37,20 @@
 <div id="content"></div>
 
 <script>
-  const gifts = [
-    { date: "2026-02-14", title: "Valentine đầu tiên", message: "Em nhớ anh rất nhiều 💕", video: "VIDEO_LINK_1" },
-    { date: "2026-02-15", title: "Ngày 2", message: "Hôm nay của anh thế nào?", video: "VIDEO_LINK_2" },
-    { date: "2026-02-16", title: "Ngày 3", message: "Cố lên nhé 💙", video: "VIDEO_LINK_3" },
-    { date: "2026-02-25", title: "Ngày ra quân", message: "Chào mừng anh trở về 🤍", video: "VIDEO_LINK_12" }
-  ];
+ const gifts = [
+  { date: "2026-02-14", title: "Ngày 1 – Valentine 💝", message: "Valentine đầu tiên mình xa nhau, nhưng tim em thì luôn ở cạnh anh.", video: "VIDEO_1" },
+  { date: "2026-02-15", title: "Ngày 2", message: "Hôm nay anh có mệt không? Nhớ giữ sức nhé.", video: "VIDEO_2" },
+  { date: "2026-02-16", title: "Ngày 3", message: "Mỗi ngày trôi qua là một ngày gần anh hơn.", video: "VIDEO_3" },
+  { date: "2026-02-17", title: "Ngày 4", message: "Có những lúc em chỉ muốn nói là: em tự hào về anh.", video: "VIDEO_4" },
+  { date: "2026-02-18", title: "Ngày 5", message: "Cố lên thêm chút nữa thôi nhé 💙", video: "VIDEO_5" },
+  { date: "2026-02-19", title: "Ngày 6", message: "Anh không hề cô đơn đâu, vì lúc nào em cũng nghĩ về anh.", video: "VIDEO_6" },
+  { date: "2026-02-20", title: "Ngày 7", message: "Một tuần rồi đó, anh có thấy nhớ em như em nhớ anh không?", video: "VIDEO_7" },
+  { date: "2026-02-21", title: "Ngày 8", message: "Cảm ơn anh vì đã cố gắng từng ngày.", video: "VIDEO_8" },
+  { date: "2026-02-22", title: "Ngày 9", message: "Mỗi ngày chờ anh là một ngày em học cách kiên nhẫn hơn.", video: "VIDEO_9" },
+  { date: "2026-02-23", title: "Ngày 10", message: "Gần tới ngày rồi, em hồi hộp lắm.", video: "VIDEO_10" },
+  { date: "2026-02-24", title: "Ngày 11", message: "Ngày mai thôi, anh về rồi 🤍", video: "VIDEO_11" },
+  { date: "2026-02-25", title: "Ngày 12 – Anh về 💐", message: "Chào mừng anh trở về với em.", video: "VIDEO_12" }
+];
 
   const today = new Date().toISOString().split("T")[0];
   const container = document.getElementById("content");
