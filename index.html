@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>12 Ngày Gửi Anh 💙</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #fdf6f8;
+      text-align: center;
+      padding: 20px;
+    }
+    .gift {
+      border: 2px dashed #f08cae;
+      border-radius: 15px;
+      padding: 20px;
+      margin: 20px auto;
+      max-width: 500px;
+      background: white;
+    }
+    .locked {
+      color: gray;
+      opacity: 0.6;
+    }
+    video {
+      width: 100%;
+      border-radius: 10px;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+<h1>💌 12 Ngày Gửi Anh</h1>
+<p>Mỗi ngày mở một món quà nhé.</p>
+
+<div id="content"></div>
+
+<script>
+  const gifts = [
+    { date: "2026-02-14", title: "Valentine đầu tiên", message: "Em nhớ anh rất nhiều 💕", video: "VIDEO_LINK_1" },
+    { date: "2026-02-15", title: "Ngày 2", message: "Hôm nay của anh thế nào?", video: "VIDEO_LINK_2" },
+    { date: "2026-02-16", title: "Ngày 3", message: "Cố lên nhé 💙", video: "VIDEO_LINK_3" },
+    { date: "2026-02-25", title: "Ngày ra quân", message: "Chào mừng anh trở về 🤍", video: "VIDEO_LINK_12" }
+  ];
+
+  const today = new Date().toISOString().split("T")[0];
+  const container = document.getElementById("content");
+
+  gifts.forEach(gift => {
+    const div = document.createElement("div");
+    div.className = "gift";
+
+    if (today >= gift.date) {
+      div.innerHTML = `
+        <h2>🎁 ${gift.title}</h2>
+        <p>${gift.message}</p>
+        <video controls>
+          <source src="${gift.video}" type="video/mp4">
+        </video>
+      `;
+    } else {
+      div.classList.add("locked");
+      div.innerHTML = `
+        <h2>🔒 ${gift.title}</h2>
+        <p>Sẽ mở vào ngày ${gift.date}</p>
+      `;
+    }
+
+    container.appendChild(div);
+  });
+</script>
+
+</body>
+</html>
